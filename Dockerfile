@@ -2,10 +2,10 @@
 FROM alpine:latest
 MAINTAINER ilee
 
-ENV kms_DIR=/usr/local/KMS-Server
-
+ENV kms_DIR=/usr/local/KMS-Server \
+    vlmcsd_version=1111
 RUN set -ex && \
-    kms_latest=https://github.com/Wind4/vlmcsd/releases/download/svn1111/binaries.tar.gz && \
+    kms_latest=https://github.com/Wind4/vlmcsd/releases/download/svn${vlmcsd_version}/binaries.tar.gz && \
     kms_latest_filename=binaries.tar.gz && \
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
     apk update && \
