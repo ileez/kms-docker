@@ -3,7 +3,7 @@ FROM alpine:latest
 MAINTAINER ilee
 
 ENV kms_DIR=/usr/local/KMS-Server \
-    vlmcsd_version=1111
+    vlmcsd_version=1112
 RUN set -ex && \
     kms_latest=https://github.com/Wind4/vlmcsd/releases/download/svn${vlmcsd_version}/binaries.tar.gz && \
     kms_latest_filename=binaries.tar.gz && \
